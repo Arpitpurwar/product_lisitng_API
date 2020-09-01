@@ -23,11 +23,10 @@ async function connectDb() {
       
           let pool  = await sql.connect(dbConfig);
           db = await pool.request();
-          console.log("DB Connected")
-;          return db;
+          console.log("DB Connected");
+          return db;
 
    
-  
     } catch (err) {
         // ... error checks
     }
