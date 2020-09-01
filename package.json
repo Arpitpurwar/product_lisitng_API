@@ -1,0 +1,26 @@
+{
+  "name": "product_lisitng_API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arpitpurwar/product_lisitng_API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arpitpurwar/product_lisitng_API/issues"
+  },
+  "homepage": "https://github.com/Arpitpurwar/product_lisitng_API#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1"
+  }
+}
