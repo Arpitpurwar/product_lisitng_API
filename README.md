@@ -3,7 +3,11 @@
 # Consideration
 1) User has already exists in system. 
 
-// APIS
+
+
+
+#  APIs
+
  1) login
 http://localhost:4000/api/login
 POST
@@ -45,3 +49,9 @@ Request Payload :
     "USER_ID" : "arpit12",
     "PRODUCT_ID" :  "admin123"
 }
+
+
+
+# test
+
+run command npm test
