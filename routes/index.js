@@ -37,7 +37,7 @@ router.post('/login', function (req, res) {
 
 
   // Logout
-  router.post('/logout', function(req, res, next) {
+  router.get('/logout', function(req, res, next) {
     req.session.destroy();
     res.json({"status" : "successs",
     "message" : "user has successfully logged out"
@@ -45,8 +45,6 @@ router.post('/login', function (req, res) {
 });
 
 router.use(function (req, res, next) {
-  console.log(" Session ID ", req.session.id);
-
   if (req.session.login) {
 	  next();
   }

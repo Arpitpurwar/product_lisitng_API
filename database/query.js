@@ -63,16 +63,10 @@ async function getCartProductForSpecificUser (userid){
 }
 
 async function addProductToCart (data){
-    console.log("result",data);
     if(data.PRODUCT_ID && data.USER_ID ){
         let tempQuery = `Insert into dbo.UserCart (PRODUCT_ID,USER_ID) values(${data.PRODUCT_ID},${data.USER_ID})`;
-        console.log(tempQuery);
         let result = await runQuery(tempQuery);
-        console.log(result);
         return result
-
-
-
     }else{
         return {
             "status" : "success",
