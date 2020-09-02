@@ -1,5 +1,20 @@
 # Product Listing API
 
+# DB enviorment
+create .env file at root and paste below field with updated Credentials
+server = xxxxxxx
+password = xxxxx
+userid = xxxxx
+databaseName = xxxxx
+
+# Run application
+-- server
+npm start
+
+-- test
+npm test
+
+
 # Consideration
 1) User has already exists in system. 
 
@@ -52,6 +67,5 @@ Request Payload :
 
 
 
-# test
 
-run command npm test
+
