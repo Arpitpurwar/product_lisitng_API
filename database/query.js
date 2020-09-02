@@ -80,10 +80,10 @@ async function addProductToCart (data){
 
 async function login (data){
  
-    let tempQuery = `select PASSWORD from dbo.Users where USER_NAME = '${data.USER_NAME}'`;
+    let tempQuery = `select PASSWORD,ID,USER_NAME from dbo.Users where USER_NAME = '${data.USER_NAME}'`;
     let result = await runQuery(tempQuery);
          if(result.length > 0){
-            return result[0].PASSWORD === data.PASSWORD ? true : false
+            return result[0].PASSWORD === data.PASSWORD ? result : false
         }
         else{
               return false
