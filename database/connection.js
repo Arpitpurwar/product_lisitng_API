@@ -33,28 +33,24 @@ async function connectDb() {
 }
 
 function runQuery(query) {
-  console.log("Query",query);
     return new Promise((resolve, reject) => {
         try {
             db.query(query, function (err, result) {
                 if (err) {
                     let errString = `${err}`; 
-                    let msg=errmsg[err.number]
                     reject(
                       { 
                         STATUS:500,
                         "SUCCESS": false, 
-                        "MESSAGE": !msg?'There is some problem in execution. Please contact application administrator':msg.custommsg,
+                        "MESSAGE": 'There is some problem in execution. Please contact application administrator',
                         "MESSAGESQL": errString           
                       })
                 }
                 else {
                     if (result.recordset == undefined) {
-                      console.log('result set undefined');
-                        resolve({ "SUCCESS": true, "MESSAGE": "Query run successfully" });
+                        resolve({ "SUCCESS": true, "MESSAGE": "product is added to cart successfully" });
                     }
                     else {
-                      console.log('result set ');
                         resolve(result.recordset);
                     }
             }
@@ -71,9 +67,7 @@ function runQuery(query) {
     })
 }
 
-var getConnection = function(){
-    return db;
-  }
 
 
-  module.exports = { getConnection,connectDb,runQuery }
+
+  module.exports = { connectDb,runQuery }
