@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const {listAllProducts} = require('../database/query');
 
 
 
@@ -26,6 +26,8 @@ const router = express.Router();
 });
 
 
-
+router.get('/listAllProducts',function(req,res){
+  listAllProducts().then( data => res.send(data)).catch( err => res.status(500).send(err));
+})
 
 module.exports = router;
