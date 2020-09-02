@@ -10,7 +10,7 @@ async function connectDb() {
         let dbConfig = {
             server: process.env.server,
             database: process.env.databaseName,
-            user: 'test',
+            user: process.env.userid,
             password: process.env.password,
             driver: sql,
             enableArithAbort:false,
@@ -29,6 +29,8 @@ async function connectDb() {
    
     } catch (err) {
         // ... error checks
+        console.log("DB Connected");
+        return err;
     }
 }
 

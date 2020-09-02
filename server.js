@@ -26,5 +26,5 @@ app.use('/api',route);
         app.listen(port,()=>{
              console.log(`Server is running on port ${port}`);
          })
-     })
+     }).catch( err => console.log("Please restart the server ",err));
     
